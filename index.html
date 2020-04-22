@@ -10,8 +10,8 @@
 <body>
 	<div id="image" class="image">
 	<button style="	background-color:red; height:40px; border-radius: 5px;" type="button" onclick="restart()">Restart</button>
-	<h1 id="head">Find Correct Button to Change Image</h1>
-	<h1 style="font-size:60px;" id="clock">10<br></h1>
+	<h1 id="head">Click Correct Button to Change Image</h1>
+	<h1 style="font-size:60px;" id="clock">15<br></h1>
 		<div id="1" class="container">
 			<button id=1 type="button" onclick="select(1)">Click Me!</button>
 			<button id=1 type="button" onclick="select(2)">Click Me!</button>
@@ -45,7 +45,7 @@
 			<button id=1 type="button" onclick="select(30)">Click Me!</button>
 			<button id=1 type="button" onclick="select(31)">Click Me!</button>
 			<button id=1 type="button" onclick="select(32)">Click Me!</button>
-			<h5 style="text-align: center;">WEBCITIZEN</h5>
+			<h5 style="text-align: center;">By:WEBCITIZEN</h5>
 		</div>
 	</div>
 </body>
@@ -53,7 +53,7 @@
 
 <script>
 	// INTERVAL COUNTER
-	var countdown = 10;
+	var countdown = 15;
 
 	timer = setInterval(function () {
 		countdown = countdown-1;
@@ -73,11 +73,16 @@
 
 	var select = function (num) {
 		if (random == num) {
+			var snd = new Audio("pin.mp3");
+			snd.play();
 			document.getElementById('image').style.backgroundImage = "url(img/img2.jpg)";
 			clearTimeout(timer);
 			var message = "You Saved the Day!!!"
 			document.getElementById('clock').innerHTML = message;
 			document.getElementById('head').innerHTML =' ';
+		} else {
+			var snd = new Audio("mouse.mp3");
+			snd.play();
 		}
 	}		
 
