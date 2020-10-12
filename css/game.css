@@ -1,8 +1,9 @@
+/*GENERAL STYLING*/
 body {
 	margin: 0px;
 	padding: 0px;
 	font-family:'Changa', sans-serif;
-	background-color: red;
+	background-color: lightblue;
 }
 
 .image {
@@ -13,23 +14,29 @@ body {
 }
 
 h1 {
-	margin-top: 10px;
+	margin: 10px 0 0 0;
+	padding: 10px;
 	text-align: center;
 	font-size: 40px;
 	color: white;
+}
+
+h1#clock {
+	font-size: 60px;
+	margin: 0;
 }
 
 .container {
 	width: 70%;
 	border-color: grey;
 	border-style: solid;
-	margin-left: 15%;
-	margin-bottom: 10px;
+	text-align: center;
+	margin: 10px auto;
 }
 
 button {
 	color: white;
-	height:60px;
+	height: 60px;
 	border: 1px solid #ccc;
 	border-radius: 30px;
 	background-color: darkblue;
@@ -40,17 +47,19 @@ button:hover {
   background-color: blue;
 }
 
+
+/*PHONE MEDIA FORMAT*/
 @media (max-width: 700px) {
 .container {
 	width: 90%;
-	margin-left: 5%;
-	margin-bottom: 5px;
+	margin: 10px auto;
 }
+
+h1#clock {
+	font-size: 30px;
+}
+
 button {
-/*	color: white;
-	height:60px;
-	border: 1px solid #ccc;
-	border-radius: 30px;
-	background-color: darkblue;*/
 	margin: 10px;
+}
 }

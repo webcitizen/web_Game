@@ -3,15 +3,28 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Play Game</title>
+	<!-- Favicon -->
+    <link rel="icon" href="img/img2.jpg" type="image/gif" sizes="16x16">
+    <!-- CSS LINK -->
 	<link rel="stylesheet" href="css/game.css">
+	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
 	<div id="image" class="image">
-	<button style="	background-color:red; height:40px; border-radius: 5px;" type="button" onclick="restart()">Restart</button>
-	<h1 id="head">Click Correct Button to Change Image</h1>
-	<h1 style="font-size:60px;" id="clock">15<br></h1>
+
+		<!-- RESTART BUTTON -->
+		<button style="background-color:red; height:40px; border-radius:5px;" type="button" onclick="restart()">Restart</button>
+
+		<!-- HEAD TEXT -->
+		<h1 id="head">Find The Correct Button</h1>
+
+		<!-- COUNTDOWN CLOCK -->
+		<h1 id="clock">15</h1>
+
+		<!-- "CLICK-ME BUTTONS" -->
 		<div id="1" class="container">
 			<button id=1 type="button" onclick="select(1)">Click Me!</button>
 			<button id=1 type="button" onclick="select(2)">Click Me!</button>
@@ -45,13 +58,14 @@
 			<button id=1 type="button" onclick="select(30)">Click Me!</button>
 			<button id=1 type="button" onclick="select(31)">Click Me!</button>
 			<button id=1 type="button" onclick="select(32)">Click Me!</button>
-			<h5 style="text-align: center;">By:WEBCITIZEN</h5>
+			<p><a style="text-align:center;color:lightgrey;" href="http://webcitizen.epizy.com/">By: WebCitizen</a></p>
 		</div>
 	</div>
-</body>
-</html>
 
+
+<!-- JAVASCRIPT CODE -->
 <script>
+
 	// INTERVAL COUNTER
 	var countdown = 15;
 
@@ -62,7 +76,7 @@
 			var message = "Oh No! You Lost!"
 			document.getElementById('clock').innerHTML = message;
 			document.getElementById('clock').style.color = 'red';
-			document.getElementById("1").style.display = 'none';
+			document.getElementById("1").style.opacity = '0';
 		}
 	}, 1000);
 
@@ -79,7 +93,8 @@
 			clearTimeout(timer);
 			var message = "You Saved the Day!!!"
 			document.getElementById('clock').innerHTML = message;
-			document.getElementById('head').innerHTML =' ';
+			document.getElementById('head').innerHTML ='';
+			document.getElementById("1").style.opacity = '0';
 		} else {
 			var snd = new Audio("mouse.mp3");
 			snd.play();
@@ -92,4 +107,6 @@
 	}
 
 </script>
+</body>
+</html>
 
